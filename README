@@ -1,0 +1,35 @@
+Install
+=======
+
+DISCLAIMER
+----------
+I Have not fully thought this idea out. Just using this repo as a place to play with the idea and document at this point. Also note that I'm making this way way way more difficult than it's first iteration should be. Expect features to be cut.
+
+Fluid Thought
+-------------
+
+This repository is meant to keep track and sync what you're installing deleting on a dev environment. Generally I have a set of common dev packages (initially this will be a simple personal script file). Ideally, and perhaps later I will create an installer that is portable and installs everything that you personally use on dev environments.
+
+While this is dangerous/probably won't work for a while the concept is nice, imagine extending brew/apt-get/ports (or even git installs...) to keep track of your history and sync between all dev environments a subset of tools that you choose are useful to you.
+
+Ideally also this will allow you to sync versions between all the dev environments you use. 
+For example say I have python installed but it's 2.7.2 not the current version 3.x. This creates a lot of issues when:
+	A new developer joins a team.
+	Reinstall a machine.
+	Upgrade a machine.
+
+Another example is when a developer joins a new team who has been using say ack for a while to glob files but the team does not have that tool in their toolset.
+
+While there are work arounds (take an image of an old machine etc). These don't solve the main problem at hand, allowing your customizations to be portable accross development environments. 
+Several engineers just learn to minimize their toolset to increase their portability while others choose to dedicate themselves to specific environments etc. 
+Portability of late seems to be one of the most important things in Software Development. While we are allowing these tools to be very portable we are missing out on one of the key factors. The portability of the developer themselves. 
+
+Ideally this could be extended to be an external service that keeps track of dev environment preferences for developers and also for a team of developers.
+
+Features
+--------
+
+* Keep track of personal tools
+* Keep track of team tools
+* Dependecies tracking (brew on crack)
+* Configuration files for each tool (similar to .oh-my-zsh/custom, perhaps also have community led plugins, extendable to every shell)
